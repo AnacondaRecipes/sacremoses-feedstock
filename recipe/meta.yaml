@@ -43,11 +43,14 @@ test:
     - pytest -vv sacremoses/test
 
 about:
-  home: https://github.com/alvations/sacremoses
-  license: LGPL-2.1-or-later
-  license_family: LGPL
+  home: https://github.com/hplt-project/sacremoses
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
-  summary: SacreMoses
+  summary: Python port of Moses tokenizer, truecaser and normalizer
+  description: Python port of Moses tokenizer, truecaser and normalizer
+  dev_url: https://github.com/hplt-project/sacremoses
+  doc_url: https://github.com/hplt-project/sacremoses
 
 extra:
   recipe-maintainers:
