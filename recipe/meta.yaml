@@ -10,7 +10,6 @@ source:
   sha256: b6fd5d3a766b02154ed80b962ddca91e1fd25629c0978c7efba21ebccf663934
 
 build:
-  noarch: python
   number: 0
   entry_points:
     - sacremoses=sacremoses.cli:cli
