@@ -6,8 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b6fd5d3a766b02154ed80b962ddca91e1fd25629c0978c7efba21ebccf663934
+  #url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/hplt-project/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 139faad4800a5da04498e4b5c297a5a8e1c958877b59090715d8a3f90e0b9b76
 
 build:
   skip: true  # [py<38]
@@ -29,10 +30,18 @@ requirements:
     - regex >=2020.1.8
 
 test:
+  source_files:
+    - sacremoses/test
   imports:
     - sacremoses
+  requires:
+    - pip
+    - pytest
   commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - sacremoses --help
+    - pytest -vv sacremoses/test
 
 about:
   home: https://github.com/alvations/sacremoses
