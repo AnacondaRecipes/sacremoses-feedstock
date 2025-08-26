@@ -18,15 +18,15 @@ build:
 
 requirements:
   host:
+    - python
     - pip
-    - python
   run:
-    - click
-    - joblib
     - python
-    - regex
-    - six
-    - tqdm
+    - pip
+    - click ==7.1.2
+    - joblib >=1.1.0
+    - tqdm >=4.64.0
+    - regex >=2020.1.8
 
 test:
   imports:
