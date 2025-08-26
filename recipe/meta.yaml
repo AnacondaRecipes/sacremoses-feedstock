@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  #url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   url: https://github.com/hplt-project/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: 139faad4800a5da04498e4b5c297a5a8e1c958877b59090715d8a3f90e0b9b76
 
