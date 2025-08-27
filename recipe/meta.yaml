@@ -24,6 +24,8 @@ requirements:
     - wheel
   run:
     - python
+    # While requirements.txt isn't applied, we'll loosely use those as guide for our
+    # pinnings, since setup.py doesn't specify version ranges.
     - click >=7.1.2
     - joblib >=1.1.0
     - tqdm >=4.64.0
